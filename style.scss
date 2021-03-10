@@ -1,0 +1,154 @@
+
+/*
+Theme Name: Creativo Child
+Template: creativo
+Description: Creativo Child Theme.
+Author: RockyThemes
+Theme URI: http://rockythemes.com/creativo/
+Author URI: http://rockythemes.com
+Version: 99
+License: GNU General Public License
+License URI: license.txt
+*/
+
+$c-green: #8bc53f;
+$c-black: #232021;
+
+
+.header_transparent {
+  background-color: white !important;
+}
+
+
+#branding .logo {
+  padding-top: 0 !important;
+}
+
+.button.button_green, #navigation ul li a.button.button_green, #top-menu li a.button.button_green, .button.button_green.style_3d:hover {
+  background: $c-green !important;
+  border-color: $c-green !important;
+
+  &:hover {
+    background: $c-black !important;
+    border-color: $c-black !important;
+  }
+}
+
+.gform_wrapper {
+  select {
+    padding: 7px !important;
+  }
+  select, input[type="text"], textarea {
+    border: 2px solid lighten($c-black, 75%) !important;
+    color: $c-black !important;
+  }
+}
+
+
+.page-title-breadcrumb {
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &:after {
+    content: '';
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+
+  .page-title {
+    position: relative;
+    z-index: 1;
+    &-holder {
+      font-size: 3em !important;
+    }
+  }
+}
+
+
+.single_post_featured {
+  display: none;
+}
+
+.fmtg-cards {
+  display: grid;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  grid-gap: 16px;
+  &__item {
+    position: relative;
+
+    &:before {
+      content: "";
+      background-color: rgba(0,0,0,.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: .3s ease-out;
+      // display: block;
+    }
+
+    &:hover {
+      &:before {
+        content: "";
+        background-color: rgba(139,197,63,.95);
+        // display: block;
+      }
+
+      h2 {
+        text-shadow: 2px 2px 1px rbga(0,0,0,.9) !important;
+        color: black;
+      }
+    }
+
+    h2 {
+      z-index: 2;
+      position: relative;
+      color: white;
+    }
+  }
+  &__frame {
+    padding: 1em;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 225px;
+    text-align: center;
+
+  }
+}
+
+
+.post-content {
+  ul {
+    margin-bottom: 32px;
+  }
+}
+
+#searchform .search_form_button .searchbut {
+  background-color: transparent !important;
+  color: black !important;
+  border: none !important;
+
+}
+
+
+aside.sidebar {
+    background-color: white;
+    padding: 20px;
+}
